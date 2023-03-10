@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/miniature-journey/static/css/main.818242e3.css",
-    "main.js": "/miniature-journey/static/js/main.8c5c0e4a.js",
+    "main.js": "/miniature-journey/static/js/main.42ba9a76.js",
     "static/css/794.02ecfbf3.chunk.css": "/miniature-journey/static/css/794.02ecfbf3.chunk.css",
-    "static/js/794.ad53f534.chunk.js": "/miniature-journey/static/js/794.ad53f534.chunk.js",
+    "static/js/794.53ac69a5.chunk.js": "/miniature-journey/static/js/794.53ac69a5.chunk.js",
     "static/css/293.35d63917.chunk.css": "/miniature-journey/static/css/293.35d63917.chunk.css",
     "static/js/293.fbe064d6.chunk.js": "/miniature-journey/static/js/293.fbe064d6.chunk.js",
     "static/js/256.a17663dc.chunk.js": "/miniature-journey/static/js/256.a17663dc.chunk.js",
     "index.html": "/miniature-journey/index.html",
     "main.818242e3.css.map": "/miniature-journey/static/css/main.818242e3.css.map",
-    "main.8c5c0e4a.js.map": "/miniature-journey/static/js/main.8c5c0e4a.js.map",
+    "main.42ba9a76.js.map": "/miniature-journey/static/js/main.42ba9a76.js.map",
     "794.02ecfbf3.chunk.css.map": "/miniature-journey/static/css/794.02ecfbf3.chunk.css.map",
-    "794.ad53f534.chunk.js.map": "/miniature-journey/static/js/794.ad53f534.chunk.js.map",
+    "794.53ac69a5.chunk.js.map": "/miniature-journey/static/js/794.53ac69a5.chunk.js.map",
     "293.35d63917.chunk.css.map": "/miniature-journey/static/css/293.35d63917.chunk.css.map",
     "293.fbe064d6.chunk.js.map": "/miniature-journey/static/js/293.fbe064d6.chunk.js.map",
     "256.a17663dc.chunk.js.map": "/miniature-journey/static/js/256.a17663dc.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.818242e3.css",
-    "static/js/main.8c5c0e4a.js"
+    "static/js/main.42ba9a76.js"
   ]
 }
