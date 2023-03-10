@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkminiature_journey=self.webpackChunkminiature_journey||[]).push([[256],{256:function(n,e,u){u.r(e);var r=u(184);e.default=function(){return(0,r.jsx)("h2",{children:"Oops! Page not found."})}}}]);
+//# sourceMappingURL=256.a17663dc.chunk.js.map
