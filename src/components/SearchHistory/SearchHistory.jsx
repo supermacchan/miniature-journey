@@ -1,15 +1,17 @@
+import { useSelector } from 'react-redux';
+import { selectHistory } from 'redux/selectors';
+import { nanoid } from 'nanoid'
 import css from './SearchHistory.module.css';
 
 export const SearchHistory = () => {
+    const history = useSelector(selectHistory);
+    console.log(history);
+
     return (
         <div className={css.history}>
             <h2 className={css.title}>Історія</h2>
             <ul className={css.list}>
-                {/* a list of queries will be here */}
-                {/* adding a few test ones temporarily, to adjust the styles */}
-                <li className={css.item}>20400048799001</li>
-                <li className={css.item}>20400048799002</li>
-                <li className={css.item}>20400048799003</li>
+                {history.map(item => <li className={css.item} key={nanoid()}>{item}</li>)}
             </ul>
         </div>
     )
