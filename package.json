@@ -1,8 +1,8 @@
 {
-  "name": "np-test-task",
+  "name": "miniature-journey",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://supermacchan.github.io/np-test-task/",
+  "homepage": "https://supermacchan.github.io/miniature-journey/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
