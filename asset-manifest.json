@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/miniature-journey/static/css/main.818242e3.css",
-    "main.js": "/miniature-journey/static/js/main.f2b0070b.js",
+    "main.js": "/miniature-journey/static/js/main.d8d4bf9a.js",
     "static/css/912.65a36b99.chunk.css": "/miniature-journey/static/css/912.65a36b99.chunk.css",
     "static/js/912.8915681a.chunk.js": "/miniature-journey/static/js/912.8915681a.chunk.js",
     "static/css/293.35d63917.chunk.css": "/miniature-journey/static/css/293.35d63917.chunk.css",
@@ -9,7 +9,7 @@
     "static/js/256.a17663dc.chunk.js": "/miniature-journey/static/js/256.a17663dc.chunk.js",
     "index.html": "/miniature-journey/index.html",
     "main.818242e3.css.map": "/miniature-journey/static/css/main.818242e3.css.map",
-    "main.f2b0070b.js.map": "/miniature-journey/static/js/main.f2b0070b.js.map",
+    "main.d8d4bf9a.js.map": "/miniature-journey/static/js/main.d8d4bf9a.js.map",
     "912.65a36b99.chunk.css.map": "/miniature-journey/static/css/912.65a36b99.chunk.css.map",
     "912.8915681a.chunk.js.map": "/miniature-journey/static/js/912.8915681a.chunk.js.map",
     "293.35d63917.chunk.css.map": "/miniature-journey/static/css/293.35d63917.chunk.css.map",
@@ -18,6 +18,6 @@
   },
   "entrypoints": [
     "static/css/main.818242e3.css",
-    "static/js/main.f2b0070b.js"
+    "static/js/main.d8d4bf9a.js"
   ]
 }
