@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { addNewQuery } from "../../redux/historySlice";
+import { fetchShipping } from "redux/operations";
 
 import css from './ShippingSearchForm.module.css';
 
@@ -15,6 +16,7 @@ export const ShippingSearchForm = () => {
 
     const handleFormSubmit = event => {
         event.preventDefault();
+        dispatch(fetchShipping(trackingNum));
         dispatch(addNewQuery(trackingNum));
     }
 

@@ -1,6 +1,6 @@
 import { configureStore } from "@reduxjs/toolkit";
 
-// import { shippingReducer } from "./shippingSlice";
+import { shippingReducer } from "./shippingSlice";
 import { historyReducer } from "./historySlice";
 // import { officesReducer } from "./officesSlice";
 import { filtersReducer } from "./filterSlice";
@@ -29,7 +29,7 @@ import { filtersReducer } from "./filterSlice";
 
 export const store = configureStore({
     reducer: {
-        // shipping: shippingReducer,
+        shipping: shippingReducer,
         history: historyReducer,
         // offices: officesReducer,
         filter: filtersReducer,  
