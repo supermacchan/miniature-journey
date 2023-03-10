@@ -14,7 +14,6 @@ export const ShippingSearchForm = () => {
     };
 
     const handleFormSubmit = event => {
-        console.log('shalala');
         event.preventDefault();
         dispatch(addNewQuery(trackingNum));
     }

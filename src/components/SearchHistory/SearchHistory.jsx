@@ -5,7 +5,6 @@ import css from './SearchHistory.module.css';
 
 export const SearchHistory = () => {
     const history = useSelector(selectHistory);
-    console.log(history);
 
     return (
         <div className={css.history}>

@@ -5,8 +5,6 @@ const historySlice = createSlice({
   initialState: [],
   reducers: {
     addNewQuery(state, action) {
-        console.log(state);
-        console.log(action.payload);
         state.unshift(action.payload);
     },
   },
