@@ -10,7 +10,9 @@ export const SearchHistory = () => {
         <div className={css.history}>
             <h2 className={css.title}>Історія</h2>
             <ul className={css.list}>
-                {history.map(item => <li className={css.item} key={nanoid()}>{item}</li>)}
+                { history.length > 0 && 
+                history.map(item => <li className={css.item} key={nanoid()}>{item}</li>)
+                }
             </ul>
         </div>
     )
