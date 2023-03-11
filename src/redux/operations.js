@@ -25,7 +25,7 @@ export const fetchShipping = createAsyncThunk(
             if (response.data.errors.length > 0) {
                 throw new Error(response.data.errors[0])
             }
-            // add error handling if response.data.errors ,,,,,, throw
+
             return response.data;
         } catch (error) {
             return thunkAPI.rejectWithValue(error.message);
@@ -49,7 +49,15 @@ export const fetchOffices = createAsyncThunk(
         try {
             const response = await axios.post("", params);
             console.log(response.data);
-            // add error handling if response.data.errors ,,,,,, throw
+            
+            if (response.data.errors.length > 0) {
+                throw new Error(response.data.errors[0])
+            }
+
+            if (response.data.data.length === 0) {
+                throw new Error("За запитом результатів не знайдено. Перевірте, чи коректно вказана назва населеного пункту.")
+            }
+
             return response.data;
         } catch (error) {
             return thunkAPI.rejectWithValue(error.message);
