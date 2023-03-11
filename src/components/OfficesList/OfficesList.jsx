@@ -14,7 +14,7 @@ export const OfficesList = () => {
                 { isLoading && <Loader />}
 
                 { error &&
-                    <h2 className={css.status}>error</h2>
+                    <h2 className={css.error}>error</h2>
                 }
 
                 { list.length > 0 && 

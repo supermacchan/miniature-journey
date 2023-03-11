@@ -12,11 +12,10 @@ export const ShippingInfo = () => {
         { !status && 
             <div className={css.emptyInfo}>
                 { isLoading && <Loader /> }
+                { error &&
+                    <h2 className={css.error}>{error}</h2>
+                }
             </div> 
-        }
-
-        { error &&
-            <h2 className={css.status}>error</h2>
         }
 
         { status && 
