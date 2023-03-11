@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { selectShipping } from "redux/selectors";
 import { addNewQuery } from "../../redux/historySlice";
@@ -11,6 +11,14 @@ export const ShippingSearchForm = () => {
     const { info: { number } } = useSelector(selectShipping);
     const dispatch = useDispatch();
 
+    useEffect(() => {
+        if (!number) {
+            return;
+        }
+        
+        setTrackingNum(number);
+    }, [number])
+
     const handleInputChange = event => {
         const { value } = event.currentTarget;
         setTrackingNum(value);
@@ -20,7 +28,6 @@ export const ShippingSearchForm = () => {
         event.preventDefault();
         dispatch(fetchShipping(trackingNum));
         dispatch(addNewQuery(trackingNum));
-        setTrackingNum("");
     }
 
     return (
@@ -34,7 +41,7 @@ export const ShippingSearchForm = () => {
                 placeholder="Введіть номер ТТН"
                 className={css.input}
                 onChange={handleInputChange}
-                value={trackingNum !== "" ? trackingNum : number}
+                value={trackingNum}
             />
             <button 
                 type="submit"
