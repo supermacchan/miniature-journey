@@ -1,6 +1,7 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { selectHistory } from 'redux/selectors';
 import { fetchShipping } from "redux/operations";
+import { clearHistory } from 'redux/historySlice';
 import { nanoid } from 'nanoid'
 import css from './SearchHistory.module.css';
 
@@ -11,6 +12,11 @@ export const SearchHistory = () => {
 
     const handleItemClick = (event) => {
         dispatch(fetchShipping(event.target.innerText));
+    }
+
+    const handleClearHistory = () => {
+        console.log('clear');
+        dispatch(clearHistory());
     }
 
     return (
@@ -28,6 +34,13 @@ export const SearchHistory = () => {
                         </li>)
                 }
             </ul>
+            <button 
+                type='button'
+                className={css.button}
+                onClick={handleClearHistory}
+            >
+                Видалити всі
+            </button>
         </div>
     )
 }

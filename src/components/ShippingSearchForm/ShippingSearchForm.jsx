@@ -31,7 +31,7 @@ export const ShippingSearchForm = () => {
                 placeholder="Введіть номер ТТН"
                 className={css.input}
                 onChange={handleInputChange}
-                value={trackingNum !== "" ? trackingNum : number}
+                value={trackingNum}
             />
             <button 
                 type="submit"
