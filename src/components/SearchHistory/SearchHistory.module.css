@@ -31,8 +31,16 @@
     
     font-size: 17px;
     font-weight: 500;
+
+    cursor: pointer;
+
+    transition: color 250ms ease;
 }
 
 .item:last-of-type {
     margin: 0;
+}
+
+.item:hover {
+    color: var(--accent-text-color);
 }

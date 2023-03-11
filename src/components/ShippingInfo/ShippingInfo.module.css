@@ -3,10 +3,10 @@
     height: 50px;
     padding: 0 20px;
 
-    border: 1px solid var(--hover-bg-color);
+    border: 1px solid transparent;
     border-radius: 2px;
 
-    background-color: var(--secondary-bg-color);
+    background-color: transparent;
 }
 
 

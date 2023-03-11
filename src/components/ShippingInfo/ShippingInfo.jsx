@@ -1,14 +1,23 @@
 import { useSelector } from 'react-redux';
 import { selectShipping } from 'redux/selectors';
+import { Loader } from 'components/Loader/Loader';
 import css from './ShippingInfo.module.css';
 
 export const ShippingInfo = () => {
-    const { status, sender, recipient } = useSelector(selectShipping);
+    const { isLoading, error, info: { status, sender, recipient } } = useSelector(selectShipping);
 
     return (
         <>
         
-        { !status && <div className={css.emptyInfo}></div> }
+        { !status && 
+            <div className={css.emptyInfo}>
+                { isLoading && <Loader /> }
+            </div> 
+        }
+
+        { error &&
+            <h2 className={css.status}>error</h2>
+        }
 
         { status && 
             <div className={css.info}>
