@@ -6,10 +6,18 @@ export const ShippingInfo = () => {
     const { status, sender, recipient } = useSelector(selectShipping);
 
     return (
-        <div className={css.info}>
-            <h2 className={css.status}>Статус доставки: {status}</h2>
-            <p className={css.details}>Відправлено: {sender}</p>
-            <p className={css.details}>Отримано: {recipient}</p>
-        </div>
+        <>
+        
+        { !status && <div className={css.emptyInfo}></div> }
+
+        { status && 
+            <div className={css.info}>
+                <h2 className={css.status}>Статус доставки: {status}</h2>
+                <p className={css.details}>Відправлено: {sender}</p>
+                <p className={css.details}>Отримано: {recipient}</p>
+            </div>         
+        }
+
+        </>
     )
 }
