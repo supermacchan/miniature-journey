@@ -28,6 +28,10 @@ export const ShippingSearchForm = () => {
             <input
                 type="text"
                 name="query"
+                pattern="[0-9]+"
+                minLength="14"
+                required
+                title="Номер відправлення має складатися з 14 цифр"
                 placeholder="Введіть номер ТТН"
                 className={css.input}
                 onChange={handleInputChange}
