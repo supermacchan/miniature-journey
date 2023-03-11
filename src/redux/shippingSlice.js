@@ -29,8 +29,12 @@ const shippingSlice = createSlice({
         state.info = {
             number: action.payload.data[0].Number,
             status: action.payload.data[0].Status,
-            sender: action.payload.data[0].WarehouseSender,
-            recipient: action.payload.data[0].WarehouseRecipient,
+            sender: !action.payload.data[0].CitySender
+            ? "Немає інформації"
+            : `${action.payload.data[0].CitySender}, ${action.payload.data[0].WarehouseSender}`,
+            recipient: !action.payload.data[0].CityRecipient
+            ? "Немає інформації"
+            : `${action.payload.data[0].CityRecipient}, ${action.payload.data[0].WarehouseRecipient}`,
          };
       },
       [fetchShipping.rejected]: handleRejected,

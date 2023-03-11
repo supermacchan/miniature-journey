@@ -1,7 +1,6 @@
 import { useState } from "react";
-import { useDispatch } from "react-redux";
-// useSelector
-// import { selectShipping } from "redux/selectors";
+import { useSelector, useDispatch } from "react-redux";
+import { selectShipping } from "redux/selectors";
 import { addNewQuery } from "../../redux/historySlice";
 import { fetchShipping } from "redux/operations";
 
@@ -9,7 +8,7 @@ import css from './ShippingSearchForm.module.css';
 
 export const ShippingSearchForm = () => {
     const [trackingNum, setTrackingNum] = useState("");
-    // const { info: { number } } = useSelector(selectShipping);
+    const { info: { number } } = useSelector(selectShipping);
     const dispatch = useDispatch();
 
     const handleInputChange = event => {
