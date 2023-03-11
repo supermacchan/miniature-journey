@@ -2,7 +2,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { selectHistory } from 'redux/selectors';
 import { fetchShipping } from "redux/operations";
 import { clearHistory } from 'redux/historySlice';
-import { nanoid } from 'nanoid'
+import { nanoid } from 'nanoid';
 import css from './SearchHistory.module.css';
 
 

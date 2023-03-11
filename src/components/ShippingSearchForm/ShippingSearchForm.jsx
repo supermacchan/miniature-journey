@@ -1,6 +1,7 @@
 import { useState } from "react";
-import { useSelector, useDispatch } from "react-redux";
-import { selectShipping } from "redux/selectors";
+import { useDispatch } from "react-redux";
+// useSelector
+// import { selectShipping } from "redux/selectors";
 import { addNewQuery } from "../../redux/historySlice";
 import { fetchShipping } from "redux/operations";
 
@@ -8,7 +9,7 @@ import css from './ShippingSearchForm.module.css';
 
 export const ShippingSearchForm = () => {
     const [trackingNum, setTrackingNum] = useState("");
-    const { info: { number } } = useSelector(selectShipping);
+    // const { info: { number } } = useSelector(selectShipping);
     const dispatch = useDispatch();
 
     const handleInputChange = event => {
@@ -28,10 +29,9 @@ export const ShippingSearchForm = () => {
             <input
                 type="text"
                 name="query"
-                pattern="[0-9]+"
-                minLength="14"
+                pattern="^(5|2)([0-9]{13})$"
                 required
-                title="Номер відправлення має складатися з 14 цифр"
+                title="Номер відправлення має складатися з 14 цифр та починатися з 2 або 5"
                 placeholder="Введіть номер ТТН"
                 className={css.input}
                 onChange={handleInputChange}

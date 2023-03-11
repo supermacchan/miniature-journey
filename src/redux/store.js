@@ -2,8 +2,7 @@ import { configureStore, combineReducers } from "@reduxjs/toolkit";
 
 import { shippingReducer } from "./shippingSlice";
 import { historyReducer } from "./historySlice";
-// import { officesReducer } from "./officesSlice";
-import { filtersReducer } from "./filterSlice";
+import { officesReducer } from "./officesSlice";
 
 import localStorage from 'redux-persist/lib/storage';
 import {
@@ -28,8 +27,7 @@ const historyPersistConfig = {
 const rootReducer = combineReducers({
     shipping: shippingReducer,
     history: historyReducer,
-    // offices: officesReducer,
-    filter: filtersReducer,  
+    offices: officesReducer,
 })
 
 const persistedReducer = persistReducer(historyPersistConfig, rootReducer);

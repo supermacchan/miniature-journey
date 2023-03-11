@@ -19,7 +19,30 @@ export const fetchShipping = createAsyncThunk(
         }
 
         try {
-            console.log(trackingNumber);
+            const response = await axios.post("", params);
+            console.log(response.data);
+            // add error handling if response.data.errors ,,,,,, throw
+            return response.data;
+        } catch (error) {
+            return thunkAPI.rejectWithValue(error.message);
+        }
+    }
+);
+
+export const fetchOffices = createAsyncThunk(
+    "offices/fetchBycity",
+    async (city, thunkAPI) => {
+        const params = {
+            apiKey: API_KEY,
+            modelName: "Address",
+            calledMethod: "getWarehouses",
+            methodProperties: {
+                CityName : city,
+                Language : "UA",
+            }
+        }
+
+        try {
             const response = await axios.post("", params);
             console.log(response.data);
             // add error handling if response.data.errors ,,,,,, throw
